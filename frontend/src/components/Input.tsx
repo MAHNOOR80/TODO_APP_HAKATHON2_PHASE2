@@ -5,7 +5,7 @@ import { InputHTMLAttributes, forwardRef } from 'react';
  * Reusable input field with glassmorphism styling
  */
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
   error?: string;
   helperText?: string;

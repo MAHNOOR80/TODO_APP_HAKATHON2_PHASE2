@@ -5,6 +5,9 @@ import { Toast, ToastType } from './Toast';
  * Manages and displays multiple toast notifications
  */
 
+// Re-export ToastType for convenience
+export type { ToastType };
+
 export interface ToastMessage {
   id: string;
   message: string;

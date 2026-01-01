@@ -15,18 +15,6 @@ interface TaskItemProps {
 }
 
 export function TaskItem({ task, onToggleComplete, onEdit, onDelete }: TaskItemProps) {
-  const priorityColors = {
-    low: 'text-gray-600',
-    medium: 'text-yellow-600',
-    high: 'text-red-600',
-  };
-
-  const priorityLabels = {
-    low: 'Low',
-    medium: 'Medium',
-    high: 'High',
-  };
-
   return (
     <div className="glass-card-hover p-5 mb-3 transition-all duration-300">
       <div className="flex items-start gap-4">
