@@ -7,6 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Homepage brand colors (blue-to-purple gradient)
+        brand: {
+          blue: '#3B82F6',
+          purple: '#8B5CF6',
+        },
         // Premium Navy/Slate palette with soft accents
         primary: {
           50: '#f0f4ff',
@@ -91,7 +96,16 @@ export default {
       backdropBlur: {
         'xs': '2px',
       },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+        'button-gradient': 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+      },
       keyframes: {
+        // Float animation for homepage
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
         // Slide animations
         slideIn: {
           '0%': { transform: 'translateX(100%)', opacity: '0' },
@@ -142,6 +156,7 @@ export default {
         },
       },
       animation: {
+        'float': 'float 6s ease-in-out infinite',
         'slide-in': 'slideIn 0.3s ease-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',

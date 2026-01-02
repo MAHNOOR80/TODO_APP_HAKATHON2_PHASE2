@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
+import { HomePage } from './pages/HomePage';
 import { SignupPage } from './pages/SignupPage';
 import { SigninPage } from './pages/SigninPage';
 import { DashboardPage } from './pages/DashboardPage';
@@ -16,8 +17,8 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* Root redirects to dashboard */}
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          {/* Homepage */}
+          <Route path="/" element={<HomePage />} />
 
           {/* Auth routes */}
           <Route path="/signup" element={<SignupPage />} />
